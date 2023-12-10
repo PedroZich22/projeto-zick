@@ -36,6 +36,7 @@ button {
 
 a {
   text-decoration: none;
+  color: inherit;
   color: var(--text-color);
 }
 
@@ -76,8 +77,53 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-direction: column;
 
   padding: 2rem 10rem;
+}
+
+@media screen and (max-width: 1200px) {
+  .container {
+    padding: 1rem 4rem;
+  }
+}
+
+.up-btn {
+  font-size: 1.5rem;
+  font-weight: 700;
+
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+
+  z-index: 100;
+
+  width: 50px;
+  height: 50px;
+
+  border-radius: 50%;
+  background-color: var(--primary-color);
+  color: var(--white-color);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/*HEADER*/
+
+header .container {
+  flex-direction: row;
+}
+
+@media(max-width: 1200px) {
+  header .container {
+    flex-direction: column;
+  }
 }
 
 header .logo a {
@@ -125,7 +171,7 @@ section.banner .container {
   left: 0;
   width: 100%;
   height: 100vh;
-  
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -173,7 +219,7 @@ section.banner .social-links a:hover {
   color: var(--secondary-color);
 }
 
-section.banner .social-links a:hover svg{
+section.banner .social-links a:hover svg {
   fill: var(--secondary-color);
 }
 
@@ -239,7 +285,7 @@ section.musics .music-card .music-links a {
   align-items: center;
 
   font-size: 1rem;
-  color: #1DB954;
+  color: #1db954;
 }
 
 section.musics .music-card .music-links a:hover {
@@ -297,10 +343,10 @@ section.participants .participant-card {
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* border-radius: 4px; */
 
-  background: var(--text-color);
-  color: #000;
+
+  background: rgba(0, 0, 0, 0.3);
+  color: var(--white-color);
 
   transition: all 0.3s ease;
 }
@@ -338,13 +384,20 @@ section.participants .participant-card .participant-info .participant-role {
   font-weight: 500;
 }
 
-section.participants .participant-card .participant-info .participant-social-links {
+section.participants
+  .participant-card
+  .participant-info
+  .participant-social-links {
   margin-top: 0.5rem;
   display: flex;
   gap: 1rem;
 }
 
-section.participants .participant-card .participant-info .participant-social-links a {
+section.participants
+  .participant-card
+  .participant-info
+  .participant-social-links
+  a {
   display: flex;
   align-items: center;
   font-size: 0.75rem;
@@ -353,20 +406,32 @@ section.participants .participant-card .participant-info .participant-social-lin
   transition: all 0.3s ease;
 }
 
-section.participants .participant-card .participant-info .participant-social-links a i {
+section.participants
+  .participant-card
+  .participant-info
+  .participant-social-links
+  a
+  i {
   font-size: 1rem;
   margin-right: 0.25rem;
 }
 
-section.participants .participant-card .participant-info .participant-social-links a:hover {
+section.participants
+  .participant-card
+  .participant-info
+  .participant-social-links
+  a:hover {
   color: var(--secondary-color);
 }
+
+/* ABOUT */
 
 section.about .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-direction: column;
+  padding: 10rem 10rem;
 }
 
 section.about .title {
@@ -376,3 +441,142 @@ section.about .title {
   font-weight: 700;
 }
 
+section.about p {
+  text-align: justify;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--text-color);
+}
+
+/* MEMBERS */
+
+section.members:nth-child(even) {
+  background: var(--bg-color-2);
+}
+
+section.members .title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+section.members .member-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+
+  background: rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 1200px) {
+  section.members .member-container {
+    flex-direction: column;
+  }
+}
+
+section.members .member-img {
+  max-height: 600px;
+  overflow: hidden;
+}
+
+section.members .member-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+section.members .member-info {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  gap: 1rem;
+}
+
+section.members .member-info .member-name {
+  font-size: 1.75rem;
+  font-weight: 700;
+}
+
+section.members .member-info .member-role {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+section.members .member-info .member-social-links {
+  display: flex;
+  gap: 1rem;
+}
+
+section.members .member-info .member-social-links a {
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  color: var(--primary-color);
+
+  transition: all 0.3s ease;
+}
+
+section.members .member-info .member-social-links a i {
+  font-size: 1.25rem;
+  margin-right: 0.25rem;
+}
+
+section.members .member-info .member-social-links a:hover {
+  color: var(--secondary-color);
+}
+
+/* FOOTER */
+
+footer {
+  width: 100%;
+  background: var(--black-color);
+}
+
+footer .container {
+  flex-direction: row;
+}
+
+footer .logo {
+  margin-bottom: 1rem;
+}
+
+footer .logo a {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--white-color);
+}
+
+footer .logo a:hover {
+  color: var(--secondary-color);
+}
+
+footer .logo p {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--border-color);
+}
+
+footer nav {
+  display: flex;
+  gap: 1rem;
+}
+
+footer nav a {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--white-color);
+}
+
+footer nav a i {
+  font-size: 1.25rem;
+}
+
+footer nav a:hover {
+  color: var(--secondary-color);
+}

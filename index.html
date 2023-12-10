@@ -29,10 +29,15 @@
         <nav>
           <ul>
             <li><a href="#">Home</a></li>
-            <li><a href="#">Blog</a></li>
-            <li><a href="#">Músicas</a></li>
-            <li><a href="#">Sobre</a></li>
-            <li><a href="#">Integrantes</a></li>
+            <li><a href="#musics">Músicas</a></li>
+            <li><a href="#members">Integrantes</a></li>
+            <li><a href="#about">Sobre</a></li>
+            <li><a href="#participants">Participantes</a></li>
+            <li>
+              <a target="_blank" href="https://projetozick.blogspot.com/"
+                >Blog</a
+              >
+            </li>
           </ul>
         </nav>
       </div>
@@ -62,7 +67,7 @@
             href="https://open.spotify.com/intl-pt/artist/5wzbTFupyrwx7R0ZMYnTr3?si=_sF7SSBlTA26vJ-HWLZIZw"
             ><i class="ph ph-spotify-logo"></i
           ></a>
-          <a target="_blank" href="">
+          <a target="_blank" href="https://projetozick.blogspot.com/">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               height="16"
@@ -80,7 +85,7 @@
     </section>
 
     <!-- MUSICAS -->
-    <section class="musics">
+    <section class="musics" id="musics">
       <h2 class="title">Nossas Músicas</h2>
       <ul class="musics-container">
         <li class="music-card">
@@ -217,8 +222,114 @@
       </ul>
     </section>
 
+    <!-- INTEGRANTES -->
+    <section class="members" id="members">
+      <div class="container">
+        <h2 class="title">Integrantes</h2>
+        <div class="member-container">
+          <div class="member-img">
+            <img src="./images/pedro.jpeg" alt="Pedro Zich" />
+          </div>
+          <div class="member-info">
+            <h3 class="member-name">Pedro Zich</h3>
+            <div class="">
+              <p class="member-role">
+                No Projeto é o cara da tecnologia, tecladista, arranjador,
+                engenheiro de gravação e produtor. Foi dele a ideia de produzir
+                musicas em home studio, ideia essa que fez o Rony Zich montar
+                junto com ele o projeto.
+              </p>
+              <div class="member-social-links">
+                <a
+                  target="_blank"
+                  href="https://instagram.com/the_zich?igshid=OGQ5ZDc2ODk2ZA=="
+                  ><i class="ph ph-instagram-logo"></i>@the_zich</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="members">
+      <div class="container">
+        <div class="member-container">
+          <div class="member-info">
+            <h3 class="member-name">Rony Zich</h3>
+            <div class="">
+              <p class="member-role">
+                Junto com o Pedro, fundou o “Projeto Zick”, ajuda o Pedro na
+                parte da engenharia nas gravações, arranjador, baterista de
+                algumas bandas que tocaram nas noites de São Paulo, baixista e
+                tecladista aprendiz, guitarrista por algum tempo na adolescência
+                e voltando a tocar no Projeto.
+              </p>
+              <div class="member-social-links">
+                <a
+                  target="_blank"
+                  href="https://instagram.com/ronyzich?igshid=OGQ5ZDc2ODk2ZA=="
+                  ><i class="ph ph-instagram-logo"></i>@ronyzich</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="member-img">
+            <img src="./images/rony.jpeg" alt="Rony Zich" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="members">
+      <div class="container">
+        <div class="member-container">
+          <div class="member-img">
+            <img src="./images/paula.jpeg" alt="Paula Barros" />
+          </div>
+          <div class="member-info">
+            <h3 class="member-name">Paula Barros</h3>
+            <div>
+              <p class="member-role">
+                É uma das partes criativas da banda, responsável por quase todas
+                as letras das músicas do projeto, arranjadora, violonista e
+                conselheira.
+              </p>
+              <div class="member-social-links">
+                <a
+                  target="_blank"
+                  href="https://instagram.com/paulinha._.bs?igshid=MmVlMjlkMTBhMg=="
+                  ><i class="ph ph-instagram-logo"></i>@paulinha._.bs</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOBRE -->
+    <section class="about" id="about">
+      <div class="container">
+        <h2 class="title">Sobre Nós</h2>
+        <p>
+          Projeto idealizado em 2022 na Zona Sul de São Paulo pelo filho Pedro
+          Zich e pai Rony Zich de produzir suas próprias músicas. No inicio era
+          somente um projeto instrumental, mas conforme as composições foram
+          tomando forma às musicas começaram a fazer mais sentido se tivessem
+          letras, foi aí que contou com a colaboração das letras das musicas de
+          Zania Zich (mãe), Paula Barros (prima) que acabou virando também
+          integrante fixa do projeto. O projeto musical se resume em unir Rock e
+          a tecnologia com com uma sonoridade mais voltada para os dias atuais,
+          mas com um pé nos anos 80, 90 e 2000. Hoje em dia produzindo também
+          outros artistas como Cris Navarro, Lucas Barros e a própria Paula com
+          sua música Fraquezas.
+        </p>
+      </div>
+    </section>
+
     <!-- PARTICIPANTES -->
-    <section class="participants">
+    <section class="participants" id="participants">
       <div class="container">
         <h2 class="title">Participantes</h2>
         <div class="participants-container">
@@ -333,33 +444,56 @@
       </div>
     </section>
 
-    <!-- SOBRE -->
-    <section class="about">
+    <!-- FOOTER -->
+    <footer>
       <div class="container">
-        <h2 class="title">Sobre</h2>
+        <div class="logo">
+          <a class="logo" href="#">Projeto Zick</a>
+          <p>
+            © Copyright -
+            <script>
+              document.write(new Date().getFullYear());
+            </script>
+            - Todos os direitos reservados - Desenvolvido por Pedro Zich
+          </p>
+        </div>
 
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
-          voluptatum, quibusdam, voluptate, quia voluptas quod quos voluptatibus
-          quas doloribus quidem voluptatem? Quisquam voluptatum, quibusdam,
-          voluptate, quia voluptas quod quos voluptatibus quas doloribus quidem
-          voluptatem?
-        </p>
-
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
-          voluptatum, quibusdam, voluptate, quia voluptas quod quos voluptatibus
-          quas doloribus quidem voluptatem? Quisquam voluptatum, quibusdam,
-          voluptate, quia voluptas quod quos voluptatibus quas doloribus quidem
-          voluptatem?
-        </p>
+        <nav>
+          <a
+            target="_blank"
+            href="http://instagram.com/projetozick/?igshid=ZDc4ODBmNjlmNQ=="
+            ><i class="ph ph-instagram-logo"></i
+          ></a>
+          <a target="_blank" href="http://facebook.com.br/projetozick"
+            ><i class="ph ph-facebook-logo"></i
+          ></a>
+          <a target="_blank" href="https://www.youtube.com/@projetozick1507"
+            ><i class="ph ph-youtube-logo"></i
+          ></a>
+          <a
+            target="_blank"
+            href="https://open.spotify.com/intl-pt/artist/5wzbTFupyrwx7R0ZMYnTr3?si=_sF7SSBlTA26vJ-HWLZIZw"
+            ><i class="ph ph-spotify-logo"></i
+          ></a>
+          <a target="_blank" href="">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="16"
+              width="14"
+              viewBox="0 0 448 512"
+            >
+              <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2023 Fonticons, Inc.-->
+              <path
+                d="M162.4 196c4.8-4.9 6.2-5.1 36.4-5.1 27.2 0 28.1 .1 32.1 2.1 5.8 2.9 8.3 7 8.3 13.6 0 5.9-2.4 10-7.6 13.4-2.8 1.8-4.5 1.9-31.1 2.1-16.4 .1-29.5-.2-31.5-.8-10.3-2.9-14.1-17.7-6.6-25.3zm61.4 94.5c-53.9 0-55.8 .2-60.2 4.1-3.5 3.1-5.7 9.4-5.1 13.9 .7 4.7 4.8 10.1 9.2 12 2.2 1 14.1 1.7 56.3 1.2l47.9-.6 9.2-1.5c9-5.1 10.5-17.4 3.1-24.4-5.3-4.7-5-4.7-60.4-4.7zm223.4 130.1c-3.5 28.4-23 50.4-51.1 57.5-7.2 1.8-9.7 1.9-172.9 1.8-157.8 0-165.9-.1-172-1.8-8.4-2.2-15.6-5.5-22.3-10-5.6-3.8-13.9-11.8-17-16.4-3.8-5.6-8.2-15.3-10-22C.1 423 0 420.3 0 256.3 0 93.2 0 89.7 1.8 82.6 8.1 57.9 27.7 39 53 33.4c7.3-1.6 332.1-1.9 340-.3 21.2 4.3 37.9 17.1 47.6 36.4 7.7 15.3 7-1.5 7.3 180.6 .2 115.8 0 164.5-.7 170.5zm-85.4-185.2c-1.1-5-4.2-9.6-7.7-11.5-1.1-.6-8-1.3-15.5-1.7-12.4-.6-13.8-.8-17.8-3.1-6.2-3.6-7.9-7.6-8-18.3 0-20.4-8.5-39.4-25.3-56.5-12-12.2-25.3-20.5-40.6-25.1-3.6-1.1-11.8-1.5-39.2-1.8-42.9-.5-52.5 .4-67.1 6.2-27 10.7-46.3 33.4-53.4 62.4-1.3 5.4-1.6 14.2-1.9 64.3-.4 62.8 0 72.1 4 84.5 9.7 30.7 37.1 53.4 64.6 58.4 9.2 1.7 122.2 2.1 133.7 .5 20.1-2.7 35.9-10.8 50.7-25.9 10.7-10.9 17.4-22.8 21.8-38.5 3.2-10.9 2.9-88.4 1.7-93.9z"
+              />
+            </svg>
+          </a>
+        </nav>
       </div>
-    </section>
+    </footer>
 
-    <section class="members">
-      <div class="container">
-        <h3></h3>
-      </div>
-    </section>
+    <div class="up-btn">
+      <a href="#"><i class="ph ph-arrow-up"></i></a>
+    </div>
   </body>
 </html>
