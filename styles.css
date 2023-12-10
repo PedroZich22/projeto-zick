@@ -1,0 +1,378 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --primary-color: #3b82f6;
+  --secondary-color: #f9a826;
+  --text-color: #f1f1f1;
+  --border-color: #848d99;
+
+  --white-color: #fff;
+  --black-color: #000;
+  --bg-color: #010915;
+  --bg-color-2: #06347d;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+body,
+textarea,
+input,
+button {
+  font-family: "Rethink Sans", Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+button {
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+input,
+textarea {
+  outline: none;
+  border: none;
+}
+
+header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  background-color: var(--black-color);
+  transition: all 0.3s ease;
+
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 2rem 10rem;
+}
+
+header .logo a {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--white-color);
+}
+
+header nav ul {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+header nav ul li a {
+  font-size: 1rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+header nav ul li a i {
+  font-size: 1.25rem;
+}
+
+header nav ul li a:hover,
+header nav ul li a.active {
+  color: var(--secondary-color);
+}
+
+section.banner {
+  width: 100%;
+  height: 100vh;
+  background-color: var(--bg-color-2);
+  background-image: url("../images/banner-bg.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-blend-mode: multiply;
+  position: relative;
+}
+
+section.banner .container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 10rem 10rem;
+  height: 100%;
+}
+
+section.banner .logo-img {
+  width: 800px;
+  height: 200px;
+  overflow: hidden;
+}
+
+section.banner .logo-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+section.banner .social-links {
+  font-size: 1.5rem;
+  display: flex;
+  gap: 1rem;
+
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+section.banner .social-links a {
+  width: 1.5rem;
+  height: 1.5rem;
+  color: var(--white-color);
+}
+
+section.banner .social-links a svg {
+  width: 100%;
+  height: 100%;
+  fill: var(--white-color);
+}
+
+section.banner .social-links a:hover {
+  color: var(--secondary-color);
+}
+
+section.banner .social-links a:hover svg{
+  fill: var(--secondary-color);
+}
+
+/* MUSIC */
+
+section.musics {
+  width: 100%;
+  padding: 2rem 10rem;
+}
+
+section.musics .title {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+section.musics .musics-container {
+  display: flex;
+  flex-direction: column;
+}
+
+section.musics .music-card {
+  padding: 1rem;
+  transition: all 0.3s ease;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  border-collapse: collapse;
+  border-bottom: var(--border-color) 1px solid;
+}
+
+section.musics .music-card:nth-child(1) {
+  border-top: var(--border-color) 1px solid;
+}
+
+section.musics .music-card .music-data {
+  display: flex;
+  gap: 1rem;
+}
+
+section.musics .music-card .music-img {
+  width: 50px;
+  height: 50px;
+  overflow: hidden;
+}
+
+section.musics .music-card .music-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+section.musics .music-card .music-links {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+section.musics .music-card .music-links a {
+  display: flex;
+  align-items: center;
+
+  font-size: 1rem;
+  color: #1DB954;
+}
+
+section.musics .music-card .music-links a:hover {
+  color: #5eca83;
+}
+
+section.musics .music-card .music-info {
+  display: flex;
+  flex-direction: column;
+}
+
+section.musics .music-card .music-info .music-name {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+section.musics .music-card .music-info p {
+  color: var(--border-color);
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+/* PARTICIPANTS */
+
+section.participants .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  padding: 2rem 10rem;
+
+  background: var(--bg-color-2);
+}
+
+section.participants .title {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+section.participants .participants-container {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+@media screen and (max-width: 1200px) {
+  section.participants .participants-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+section.participants .participant-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* border-radius: 4px; */
+
+  background: var(--text-color);
+  color: #000;
+
+  transition: all 0.3s ease;
+}
+
+section.participants .participant-card:hover {
+  transform: translateY(-0.5rem);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+section.participants .participant-card .participant-img {
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  /* border-radius: 4px 4px 0 0; */
+}
+
+section.participants .participant-card .participant-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+section.participants .participant-card .participant-info {
+  padding: 1rem;
+  text-align: center;
+}
+
+section.participants .participant-card .participant-info .participant-name {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+section.participants .participant-card .participant-info .participant-role {
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+section.participants .participant-card .participant-info .participant-social-links {
+  margin-top: 0.5rem;
+  display: flex;
+  gap: 1rem;
+}
+
+section.participants .participant-card .participant-info .participant-social-links a {
+  display: flex;
+  align-items: center;
+  font-size: 0.75rem;
+  color: var(--primary-color);
+
+  transition: all 0.3s ease;
+}
+
+section.participants .participant-card .participant-info .participant-social-links a i {
+  font-size: 1rem;
+  margin-right: 0.25rem;
+}
+
+section.participants .participant-card .participant-info .participant-social-links a:hover {
+  color: var(--secondary-color);
+}
+
+section.about .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+
+section.about .title {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
