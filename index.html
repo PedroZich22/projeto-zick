@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-
+    <link rel="shortcut icon" href="./images/logo-album.jpeg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>Projeto Zick</title>
@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="styles.css" />
 
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <script src="script.js" defer></script>
   </head>
   <body>
     <!-- HEADER -->
@@ -26,19 +27,19 @@
           <a href="#">Projeto Zick</a>
         </div>
 
-        <nav>
-          <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#musics">Músicas</a></li>
-            <li><a href="#members">Integrantes</a></li>
-            <li><a href="#about">Sobre</a></li>
-            <li><a href="#participants">Participantes</a></li>
-            <li>
-              <a target="_blank" href="https://projetozick.blogspot.com/"
-                >Blog</a
-              >
-            </li>
-          </ul>
+        <div id="burger">
+          <button id="burger-btn" onclick="handleOpenMenu()">
+            <i class="ph ph-list"></i>
+          </button>
+        </div>
+
+        <nav class="" id="nav">
+          <a href="#">Home</a>
+          <a href="#musics">Músicas</a>
+          <a href="#members">Integrantes</a>
+          <a href="#about">Sobre</a>
+          <a href="#participants">Participantes</a>
+          <a target="_blank" href="https://projetozick.blogspot.com/">Blog</a>
         </nav>
       </div>
     </header>
@@ -339,9 +340,7 @@
             </div>
             <div class="participant-info">
               <h3 class="participant-name">Cris Navarro</h3>
-              <p class="participant-role">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              </p>
+              <p class="participant-role">Cantor</p>
               <div class="participant-social-links">
                 <a
                   href="https://www.instagram.com/cris.navarro31/?igshid=MmVlMjlkMTBhMg%3D%3D"
@@ -357,9 +356,7 @@
             </div>
             <div class="participant-info">
               <h3 class="participant-name">Lucas Barros</h3>
-              <p class="participant-role">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              </p>
+              <p class="participant-role">Cantor</p>
               <div class="participant-social-links">
                 <a
                   href="https://www.instagram.com/lbalves11/?igshid=MmVlMjlkMTBhMg%3D%3D"
@@ -375,9 +372,7 @@
             </div>
             <div class="participant-info">
               <h3 class="participant-name">Rafaela Barros</h3>
-              <p class="participant-role">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              </p>
+              <p class="participant-role">Cantora</p>
               <div class="participant-social-links">
                 <a
                   href="https://www.instagram.com/rafabarross__/?igshid=MmVlMjlkMTBhMg%3D%3D"
@@ -393,9 +388,7 @@
             </div>
             <div class="participant-info">
               <h3 class="participant-name">Fernando Doro</h3>
-              <p class="participant-role">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              </p>
+              <p class="participant-role">Guitarrista</p>
               <div class="participant-social-links">
                 <a
                   href="https://www.instagram.com/dorofernando/?igshid=MmVlMjlkMTBhMg%3D%3D"
@@ -411,9 +404,7 @@
             </div>
             <div class="participant-info">
               <h3 class="participant-name">Zania Zich</h3>
-              <p class="participant-role">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              </p>
+              <p class="participant-role">Letrista</p>
               <div class="participant-social-links">
                 <a
                   href="https://www.instagram.com/zaniazich65/?igshid=MmVlMjlkMTBhMg%3D%3D"
@@ -429,9 +420,7 @@
             </div>
             <div class="participant-info">
               <h3 class="participant-name">Aline Rodrigues</h3>
-              <p class="participant-role">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              </p>
+              <p class="participant-role">Cantora</p>
               <div class="participant-social-links">
                 <a
                   href="https://www.instagram.com/_rodriguesalinne/?igshid=MmVlMjlkMTBhMg%3D%3D"
@@ -441,6 +430,34 @@
             </div>
           </div>
         </div>
+      </div>
+    </section>
+
+    <section class="contact">
+      <div class="container">
+        <h2 class="title">Contato</h2>
+
+        <form action="https://api.staticforms.xyz/submit" method="post">
+          <input type="text" name="name" placeholder="Seu Nome" required />
+          <input type="text" name="email" placeholder="Seu Email" required />
+          <textarea
+            placeholder="Sua Mensagem"
+            name="message"
+            required
+          ></textarea>
+          <input type="text" name="honeypot" style="display: none" />
+          <input
+            type="hidden"
+            name="accessKey"
+            value="e2ddb069-11a1-42d8-813d-848e9a34b833"
+          />
+          <input
+            type="hidden"
+            name="redirectTo"
+            value="https://projetozich.netlify.app/"
+          />
+          <button id="btn-form" type="submit">Enviar</button>
+        </form>
       </div>
     </section>
 
@@ -493,7 +510,7 @@
     </footer>
 
     <div class="up-btn">
-      <a href="#"><i class="ph ph-arrow-up"></i></a>
+      <a href=""><i class="ph ph-arrow-up"></i></a>
     </div>
   </body>
 </html>
